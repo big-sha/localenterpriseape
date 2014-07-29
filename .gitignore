@@ -15,7 +15,8 @@
 /log/*.log
 /tmp
 
-/initializers/setup_mail.rb
+config/initializers/setup_mail.rb
+
 
 *.gem
 *.rbc
