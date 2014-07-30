@@ -1,4 +1,8 @@
 Enterpriseape::Application.routes.draw do
+  resources :companies do
+    collection { post :import }
+  end
+
   devise_for :users
   get "welcome/index"
   get "welcome/about"
@@ -6,7 +10,9 @@ Enterpriseape::Application.routes.draw do
   get "welcome/features"
   get "welcome/faq"
   get "welcome/contact"
+  
   resources :invoices
 
   root to: 'welcome#index'
+
 end
